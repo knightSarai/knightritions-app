@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-// import img from '../../img/clothes.jpg';
 export const StyledDirectory = styled.div`
     /* position: relative; */
     min-width: 30%;
