@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import {StyledDirectory} from './directory.styles';
 
 export default function directory({children}) {
     return (
-        <div className="directory-menu">
-            {children}
-        </div>
+        <StyledDirectory>
+            
+        </StyledDirectory>
     )
 }
