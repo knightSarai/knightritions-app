@@ -27,14 +27,14 @@ export const StyledDirectory = styled.div`
     justify-content: center;
     border: 1px solid black;
 
-        .title {
+        .item-title {
           font-weight: bold;
           margin-bottom: 6px;
           font-size: 22px;
           color: #4a4a4a;
         }
     
-        .subtitle {
+        .item-subtitle {
           font-weight: lighter;
           font-size: 16px;
         }
