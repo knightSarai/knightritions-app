@@ -19,7 +19,7 @@ export const theme = new (function() {
         products: "#EF5D13"
     }
     this.size = {
-        maxWidth: "1100px",
+        maxWidth: "1200px",
         mobile: '625px'
     }
 })();
