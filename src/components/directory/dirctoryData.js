@@ -2,22 +2,22 @@ export default  {
     sections: [
         {
             title: 'Supplements',
-            imgUrl: '/img/supplements.jpg',
+            imgUrl: '/img/directory/supplements.jpg',
             id: 1
         },
         {
             title: 'Fitness clothing',
-            imgUrl: '/img/clothes.jpg',
+            imgUrl: '/img/directory/clothes.jpg',
             id: 2
         },
         {
             title: 'Products',
-            imgUrl: '/img/products.jpg',
+            imgUrl: '/img/directory/products.jpg',
             id: 3
         },
         {
             title: 'Home Gym',
-            imgUrl: '/img/homegym.jpg',
+            imgUrl: '/img/directory/homegym.jpg',
             id: 4
         },
     ]
