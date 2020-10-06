@@ -53,5 +53,4 @@ export const GlobalStyles = createGlobalStyle`
 .p-2 {padding: 2.5rem}
 .p-3 {padding: 3.5rem}
 
-
 `;
