@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import {withRouter} from 'react-router-dom'
 import {StyledDirectory} from './menu-item.styles';
-// import im from '../../img/clothes.jpg'
-export default function menuItem({title, imgUrl}) {
+
+function menuItem({title, imgUrl, history, match, linkUrl}) {
     console.log(imgUrl);
+    console.log(match);
     return (
-        <StyledDirectory img={imgUrl}>
+        <StyledDirectory img={imgUrl} onClick={() => history.push(`${linkUrl}`)}>
             <div className="background-img"/>
             <div className="content">
                 <h1 className="item-title">{title}</h1>
@@ -13,3 +15,5 @@ export default function menuItem({title, imgUrl}) {
         </StyledDirectory>    
     )
 }
+
+export default  withRouter(menuItem);

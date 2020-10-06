@@ -6,15 +6,19 @@ import {theme} from './styles/theme';
 
 import Homepage from './pages/homepage';
 import './App.css';
-
+const sup = () => {
+  return (
+    <h1>sup</h1>
+  )
+}
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles/>
       <Switch>
-        <Route exact path="/" component={Homepage}/>
+        <Route  path="/" exact component={Homepage}/>
+        <Route  path="/supplements" exact component={sup}/>
       </Switch>
-      <Homepage/>
     </ThemeProvider>
     
   );
