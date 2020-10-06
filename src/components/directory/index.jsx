@@ -1,15 +1,21 @@
-import React from 'react';
-import MenuItem from '../menu-item'
+import React, {useState} from 'react';
+import {v4 as uuid} from 'uuid'
+import MenuItem from '../menu-item';
+import directoryData from './dirctoryData';
 import {StyledDirectory} from './directory.styles';
 
-export default function directory({children}) {
+export default function Directory({children}) {
+    const [state] = useState({
+        sections: [...directoryData.sections]
+    });
+   const {sections} = state;
     return (
         <StyledDirectory>
-            <MenuItem/>
-            <MenuItem/>
-            <MenuItem/>
-            <MenuItem/>
-            <MenuItem/>
+            {
+                sections.map(section => (
+                    <MenuItem key={uuid()} {...section}/>
+                ))
+            }
         </StyledDirectory>
     )
 }

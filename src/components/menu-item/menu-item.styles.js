@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+// import img from '../../img/clothes.jpg';
 export const StyledDirectory = styled.div`
   min-width: 30%;
   height: 240px;
@@ -7,8 +7,9 @@ export const StyledDirectory = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: 1px solid ${({theme}) => theme.light.main};
   margin: 0 7.5px 15px;
+  background: url(${({img}) => img}) no-repeat center center/cover;
 
   &:first-child {
     margin-right: 7.5px;
@@ -25,18 +26,20 @@ export const StyledDirectory = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-
+    border: 1px solid ${({theme}) => theme.light.sec};
+    background: ${({theme})=> theme.primary.main};
+    opacity: 0.9;
         .item-title {
           font-weight: bold;
           margin-bottom: 6px;
           font-size: 22px;
-          color: #4a4a4a;
+          color: ${({theme})=> theme.secondary.main};
         }
     
         .item-subtitle {
-          font-weight: lighter;
+          font-weight: light;
           font-size: 16px;
+          color: #ffffff;
         }
     }
 `;
