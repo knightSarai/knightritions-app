@@ -5,19 +5,16 @@ import {GlobalStyles} from './styles/global';
 import {theme} from './styles/theme';
 
 import Homepage from './pages/homepage';
+import Shop from './pages/shop'
 import './App.css';
-const sup = () => {
-  return (
-    <h1>sup</h1>
-  )
-}
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles/>
       <Switch>
         <Route  path="/" exact component={Homepage}/>
-        <Route  path="/supplements" exact component={sup}/>
+        <Route  path="/shop" exact component={Shop}/>
       </Switch>
     </ThemeProvider>
     
