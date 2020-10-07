@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
+import {v4 as uuid} from 'uuid';
 import shopData from './shop.data';
-
+import ShopCollection from '../../components/shop-collection'
 export default class index extends Component {
     state = {
-        shopData
+        ...shopData
     }
     
     render() {
-        console.log(this.state);
+        const {collections} = this.state;
+        console.log(collections);
         return (
-            <div>
-                Shop
+            <div className="shop-page">
+                {
+                    collections.map(collection => (
+                        <ShopCollection key={uuid()} {...collection}/>
+                    ))
+                }
             </div>
         )
     }
