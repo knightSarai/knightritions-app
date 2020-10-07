@@ -11,7 +11,7 @@ export default class index extends Component {
         const {collections} = this.state;
         console.log(collections);
         return (
-            <div className="shop-page">
+            <div className="shop-page container">
                 {
                     collections.map(collection => (
                         <ShopCollection key={uuid()} {...collection}/>
