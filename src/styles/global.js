@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto';
     }
   a {
-    color: ${({ theme }) => theme.primary.light};
+    color: ${({ theme }) => theme.primary.main};
     text-decoration: none;
   }
   ul{
