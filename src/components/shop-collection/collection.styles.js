@@ -4,7 +4,7 @@ export const Collection = styled.div`
     display: flex;
     flex-direction: column;
     margin: 30px;
-    
+    font-family: inherit;
     .title {
         font-size: 28px;
         font-weight: 400;
