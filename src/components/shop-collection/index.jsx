@@ -1,5 +1,6 @@
 import React from 'react'
 import {v4 as uuid} from 'uuid';
+import ShopItem from '../shop-collection-item'
 import {Collection} from './collection.styles';
 
 export default function index({title, items}) {
@@ -10,7 +11,7 @@ export default function index({title, items}) {
             <div className="preview">
                 {items
                     .slice(0, itemNum)
-                    .map(item => <div className="" key={uuid()}>{item.name}</div>)}
+                    .map(item => <ShopItem key={uuid()} {...item}/>)}
             </div>
         </Collection>
     )
