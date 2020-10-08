@@ -113,7 +113,7 @@ export default {
                 {
                     id: 15,
                     name: "Benchs",
-                    img: '/img/shop/home-gym/Benchs/main.png',
+                    img: '/img/shop/home-gym/bench/main.png',
                     price: 175
                 },
                 {
