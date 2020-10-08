@@ -14,6 +14,9 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.primary.main};
     text-decoration: none;
   }
+  a:hover {
+    color: ${({ theme }) => theme.secondary.main}
+  }
   ul{
       list-style: none;
   }
