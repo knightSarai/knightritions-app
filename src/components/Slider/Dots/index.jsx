@@ -1,5 +1,5 @@
 import React from 'react';
-import {Dots, Dot} from "./Dots";
+import {Dots, Dot} from "./dots.styles";
 
 export default function Index({ slides, activeSlide }) {
     const renderedDots = slides.map((slide, i) => (

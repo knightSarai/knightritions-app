@@ -1,12 +1,15 @@
 import React from 'react'
-import './homepage.styles.scss'
+import Slider from '../../components/Slider'
 import Directory from '../../components/directory'
-// import directory from '../../components/directory/directory.component'
+import './homepage.styles.scss'
 
 export default function hompage() {
     return (
-        <div className="homepage container">
-            <Directory/>
-        </div>
+        <>
+            <Slider/>
+            <div className="homepage container">
+                <Directory/>
+            </div>
+        </>
     )
 }
