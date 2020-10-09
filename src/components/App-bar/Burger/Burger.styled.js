@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledBurger = styled.button`
-  position: relative;
-  left: 0px;
+  position: ${({open}) => open ? "fixed" : "relative"};
+  top:  ${({open}) => open ? "10px" : "0px"};
+  left: ${({open}) => open ? "40px" : "0px"};
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -20,7 +21,7 @@ export const StyledBurger = styled.button`
   div {
     width: 30px;
     height: 4px;
-    background: ${({ theme }) => theme.primary.light };
+    background: ${({ theme, open }) => open? theme.secondary.main : theme.primary.main };
     border-radius: 10px;
     transition: all 0.3s linear;
     transform-origin: 1px;
@@ -38,7 +39,9 @@ export const StyledBurger = styled.button`
     }
   }
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.size.tablet}) {
         position: fixed;
+        top:  10px;
+        left: 12px;
     };
 `;

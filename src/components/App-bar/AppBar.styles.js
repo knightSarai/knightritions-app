@@ -1,12 +1,16 @@
 import styled from 'styled-components';
-// import  {Link} from 'react-router-dom';
 
 export const Appbar = styled("nav")`
-    min-height: 64px;
+    position: fixed;
+    min-width: 100%;
+    top:0px;
+    min-height: 75px;
     background: #ffff;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    text-transform: uppercase;
+    z-index:15;
 
 `;
 export const AppbarList = styled.ul`
@@ -14,16 +18,18 @@ export const AppbarList = styled.ul`
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
-    @media (max-width: ${({ theme }) => theme.size.mobile}) {
+    @media (max-width: ${({ theme }) => theme.size.tablet}) {
         flex-direction: column;
     };
 `;
 export const Logo = styled.li`
-    margin-left: 20px;
+    margin-left: 3rem;
     font-size: 2rem;
     color: #ffff;
+    width: 200px;
+    height: 65px;
     background: none;
-    @media (max-width: ${({ theme }) => theme.size.mobile}) {
+    @media (max-width: ${({ theme }) => theme.size.tablet}) {
         margin: auto;
     };
 `;
@@ -37,11 +43,7 @@ export const AppBarItems = styled.div`
 export const AppBarItem = styled.li`
     padding: 0 0.7rem;
     margin: 0 0.1rem;
-    @media (max-width: ${({ theme }) => theme.size.mobile}) {
+    @media (max-width: ${({ theme }) => theme.size.tablet}) {
         margin-top: 0.5rem;
     };
 `;
-// export const StyledLink = styled(Link)`
-//     text-decoration: none;
-//     color:  ${({ theme }) => theme.primary.light};
-// `;

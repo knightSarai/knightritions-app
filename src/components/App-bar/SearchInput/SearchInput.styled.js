@@ -17,8 +17,8 @@ export const SearchWrapper = styled.li`
     @media (max-width: 720px) {
         margin: auto;
     };
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-        margin-top: 0.5rem;
+    @media (max-width: ${({ theme }) => theme.size.tablet}) {
+        margin: 1rem auto;
     };
 `;
 export const Input = styled.input`

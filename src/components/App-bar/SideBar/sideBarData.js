@@ -9,8 +9,8 @@ export const sideBareData = [
         icon: <AiIcons.AiFillHome/>,
     },
     {
-        title: "About",
-        path: "/about",
+        title: "Blog",
+        path: "/blog",
         icon: <IoIcons.IoIosPaper/>,
     },
     {
@@ -18,4 +18,42 @@ export const sideBareData = [
         path: "/contact",
         icon: <IoIcons.IoIosPaper/>,
     },
+];
+
+export const otherlinks = [
+    {
+        title: "Protein",
+        products: [
+            {
+                path: "/",
+                name: "Shakes & Powders"
+            },
+            {
+                path: "/",
+                name: "Snacks"
+            },
+        ]
+    },
+    {
+        title: "WEIGHT MANAGEMENT",
+        products: [
+            {
+                path: "/",
+                name: "Weight Gainers"
+            }
+        ]
+    },
+    {
+        title: " ADVANCED FITNESS",
+        products: [
+            {
+                path: "/",
+                name: "Muscle Building"
+            },
+            {
+                path: "/",
+                name: "Endurance Support"
+            },
+        ]
+    }
 ];

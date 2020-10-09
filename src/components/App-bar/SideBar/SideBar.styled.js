@@ -2,38 +2,43 @@ import styled from 'styled-components';
 import  {Link} from 'react-router-dom';
 
 export const SideBarStyled = styled("nav")`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 1rem;
-    background: #ffff;
-    color: ${({theme}) => theme.text.primary};
-    border-right: 1px solid #3333;
-    height:100vh;
-    width: 230px;
-    position: absolute;
+    position: fixed;
     z-index: 9;
     top: 0;
     left:0;
+    font-size: 1rem;
+    background: #ffff;
+    color: ${({theme}) => theme.secondary.main};
+    border-right: 1px solid #3333;
+    height:100vh;
+    width: 230px;
     transition: transform 0.3s ease-in-out;
     transform: ${({ sideBarOpen }) => sideBarOpen ? 'translateX(0)' : 'translateX(-100%)'};
-    @media (max-width: ${({ theme }) => theme.mobile}) {
+    @media (max-width: ${({ theme }) => theme.size.mobile}) {
         width: 60%;
     };
 `;
 export const NavItems = styled("ul")`
-    margin-top: 120px;
-    width: 100%;
+    margin-top: 80px;
+    margin-left: 15%;
+    width: 80%;
+    p {
+        color: ${({theme}) => theme.dark.sec};
+        font-size: 15px;
+        font-weight: 600;
+        padding: 0.5rem 0;
+    }
+   
 `;
 export const NavItem = styled("li")`
     background: inherit;
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem; 
     a {
-        padding: 0.7rem;
+        padding: 0rem;
     }
     svg {
-        margin: 0 1rem;
+        margin: 0 0.5rem;
     }
 `;
 export const StyledLink = styled(Link)`
@@ -41,7 +46,7 @@ export const StyledLink = styled(Link)`
     color: inherit;
 
     &:hover {
-        color: ${({theme}) => theme.primary.hover}
+        color: ${({theme}) => theme.primary.main};
     }
 `;
 export const Divider = styled.hr`
