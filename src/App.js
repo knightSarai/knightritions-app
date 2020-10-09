@@ -12,6 +12,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles/>
+      <AppBar/>
       <Switch>
         <Route  path="/" exact component={Homepage}/>
         <Route  path="/shop" exact component={Shop}/>

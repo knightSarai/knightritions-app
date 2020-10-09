@@ -1,7 +1,8 @@
-import React from 'react'
-import Slider from '../../components/Slider'
-import Directory from '../../components/directory'
-import './homepage.styles.scss'
+import React from 'react';
+import Slider from '../../components/Slider';
+import Directory from '../../components/directory';
+import './homepage.styles.scss';
+import About from '../_partails/about';
 
 export default function hompage() {
     return (
@@ -10,6 +11,7 @@ export default function hompage() {
             <div className="homepage container">
                 <Directory/>
             </div>
+            <About/>
         </>
     )
 }

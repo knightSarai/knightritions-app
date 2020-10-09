@@ -87,6 +87,10 @@ export const Item = styled.div`
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: 0.5s;
+
+            &:hover {
+                background: ${({theme}) => theme.secondary.main}
+            }
         }
 
         

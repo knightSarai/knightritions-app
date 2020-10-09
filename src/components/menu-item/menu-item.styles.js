@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 export const StyledDirectory = styled.div`
-    /* position: relative; */
+    position: relative;
     min-width: 30%;
     height: 240px;
     flex: 1 1 auto;
