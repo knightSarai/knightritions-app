@@ -20,6 +20,7 @@ export const theme = new (function() {
     }
     this.size = {
         maxWidth: "1400px",
+        tablet:"850px",
         mobile: '625px'
     }
 })();
