@@ -4,7 +4,7 @@ import MenuItem from '../menu-item';
 import directoryData from './dirctoryData';
 import {StyledDirectory} from './directory.styles';
 
-export default function Directory({children}) {
+export default function Directory() {
     const [state] = useState({
         sections: [...directoryData.sections]
     });

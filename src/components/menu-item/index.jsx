@@ -2,9 +2,9 @@ import React from 'react';
 import {withRouter} from 'react-router-dom'
 import {StyledDirectory} from './menu-item.styles';
 
-function menuItem({title, imgUrl, history, match, linkUrl}) {
+function menuItem({title, imgUrl, history, linkUrl}) {
     return (
-        <StyledDirectory img={imgUrl} onClick={() => history.push(`${match.url}${linkUrl}`)}>
+        <StyledDirectory img={imgUrl} onClick={() => history.push(`${linkUrl}`)}>
             <div className="background-img"/>
             <div className="content">
                 <h1 className="item-title">{title}</h1>
