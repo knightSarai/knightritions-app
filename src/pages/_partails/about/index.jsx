@@ -6,11 +6,13 @@ export default function Index() {
     return (
         <About>
             <SideScroll/>
-            <div className="article-text">
-                <div className="article-bg"/>
+            <div className="article">
+                <div className="article-img">
+                    <img src="img/about.jpg" alt=""/>
+                </div>
                 <div className="text-content">
-                    <p>KnighTritions is committed to bringing you the most innovative and effective sports nutrition products available anywhere. Real Science is always the foundation of our product development.</p>
-                    <p>Our team of scientists, led by Drs, have over 50 years of experience developing revolutionary products based on Real Science. The Dymatize Science Team works with researchers and scientists from around the world to ensure our formulations deliver maximum results without compromising your safety.</p>
+                    <p><span>KnighTritions</span> is committed to bringing you the most innovative and effective sports nutrition products available anywhere. Real Science is always the foundation of our product development.</p>
+                    <p>Our team of scientists, led by Drs, have over <span>50 years </span>of experience developing revolutionary products based on Real Science. The KnighTritions Science Team works with researchers and scientists from around the world to ensure our formulations deliver maximum results without compromising <span>your safety.</span></p>
                 </div>
             </div>
         </About>

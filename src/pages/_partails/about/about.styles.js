@@ -4,25 +4,20 @@ export default styled.div`
     /* background: ${({theme}) => theme.light.sec}; */
     overflow: hidden;
     
-    .article-text {
-        position: relative;
-        min-width: 30%;
-        height: 240px;
-        flex: 1 1 auto;
+    .article {
+        height: 350px;
         display: flex;
-        align-items: center;
-        justify-content: center;
         border: 1px solid ${({theme}) => theme.light.main};
         overflow: hidden;
         color: #ffff;
-        .article-bg {
-            width: 100%;
+        .article-img {
+            width: 30%;
             height: 100%;
             background: url('img/about.jpg') no-repeat center center/cover;
         }
 
         .text-content{
-            position: absolute;
+            width: 70%;
             height:100%;
             display: flex;
             flex-direction: column;
@@ -36,17 +31,17 @@ export default styled.div`
                 color: ${({theme}) => theme.secondary.main};
                 line-height: 1.5;
             }
-
-            hr {
-                width: 25%;
-                height: 2px;
-                color: rgba(0, 0, 0, 0);
-                background: rgba(0, 0, 0, 0.3);
-            }
+        
             p {
-                font-size: 1.25rem;
+                font-size: 25px;
+                font-weight: 400;
                 line-height: 1.3;
                 padding:0.5rem 1rem;
+                text-align: left;
+
+                span {
+                    color: ${({theme}) => theme.secondary.main};
+                }
             }
         }
        
