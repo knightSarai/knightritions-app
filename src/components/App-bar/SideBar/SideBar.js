@@ -37,7 +37,7 @@ export default function SideBar({sideBarOpen}) {
     );
 
     const renderdComponent = (
-        <SideBarStyled sideBarOpen={sideBarOpen} key={uuid()}>
+        <SideBarStyled sideBarOpen={sideBarOpen}>
             <NavItems>
                 <p>Quick access</p>
                 {renderedNavItems}
