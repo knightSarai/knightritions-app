@@ -1,9 +1,11 @@
 import React from 'react';
 import About from './about.styles';
+import SideScroll from './SideScroll';
 
 export default function Index() {
     return (
         <About>
+            <SideScroll/>
             <div className="article-img">
                 <img className="article-img" src="img/logo/knightritions.png" alt=""/>
             </div>
