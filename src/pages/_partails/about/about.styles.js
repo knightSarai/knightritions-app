@@ -3,18 +3,6 @@ import styled from 'styled-components'
 export default styled.div`
     /* background: ${({theme}) => theme.light.sec}; */
     overflow: hidden;
-    .article-img {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 300px;
-        width: 100%;
-        margin: 2rem;
-        img {
-            width: 50%;
-        }
-    }
     
     .article-text {
         position: relative;

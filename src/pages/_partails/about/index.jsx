@@ -6,9 +6,6 @@ export default function Index() {
     return (
         <About>
             <SideScroll/>
-            <div className="article-img">
-                <img className="article-img" src="img/logo/knightritions.png" alt=""/>
-            </div>
             <div className="article-text">
                 <div className="article-bg"/>
                 <div className="text-content">
