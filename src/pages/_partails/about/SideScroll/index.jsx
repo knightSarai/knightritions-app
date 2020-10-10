@@ -15,10 +15,10 @@ export default function index() {
                 <Scene duration={`${(renderedPages.length - 1) * 120}%`} pin  triggerHook={0} triggerElement={'.about-title'}>
                     <div className="about-title">
                         <img src="img/logo/logo.png" alt=""/>
-                    </div>  
+                    </div> 
                 </Scene>
             </Controller>
-            <div class="about-pages">
+            <div className="about-pages">
                 {renderedPages}
             </div>
         </SideScroll>
