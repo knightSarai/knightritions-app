@@ -1,4 +1,5 @@
 import React from 'react';
+import {v4 as uuid} from 'uuid';
 import {sideBareData, otherlinks} from './sideBarData';
 import {NavItems, NavItem, StyledLink, Divider, SideBarStyled} from './SideBar.styled';
 import directoryData from '../../directory/dirctoryData';
@@ -20,7 +21,7 @@ export default function SideBar({sideBarOpen}) {
         </NavItem>
     ));
     const renderedOtherLinks = otherlinks.map(({title, products}, idx) => (
-        <>
+        <React.Fragment key={uuid()}>
             <p>{title}</p>
             {products.map(({path, name}) => (
                 <NavItem key={name}>
@@ -31,12 +32,12 @@ export default function SideBar({sideBarOpen}) {
             )
             )}
             {!(idx ===otherlinks - 1) && <Divider/>}
-        </>
+        </React.Fragment>
     )
     );
 
     const renderdComponent = (
-        <SideBarStyled sideBarOpen={sideBarOpen}>
+        <SideBarStyled sideBarOpen={sideBarOpen} key={uuid()}>
             <NavItems>
                 <p>Quick access</p>
                 {renderedNavItems}
