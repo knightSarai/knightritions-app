@@ -12,7 +12,6 @@ export default function index() {
             <React.Fragment key={uuid()}>
                 <Pimg img={img} title={title} />
                 <Section
-                    title={title}
                     text={text}
                     light={light}
                 />
