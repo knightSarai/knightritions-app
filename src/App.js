@@ -1,6 +1,7 @@
 import React from 'react';
 import {ThemeProvider} from 'styled-components';
 import {Switch, Route} from 'react-router-dom';
+import ScrollToTop from './util/ScrollToTop';
 import {GlobalStyles} from './styles/global';
 import {theme} from './styles/theme';
 import AppBar from './components/App-bar';
@@ -15,9 +16,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles/>
       <AppBar/>
+      <ScrollToTop/>
       <Switch>
         <Route  path="/" exact component={Homepage}/>
-        <Route  path="/shop" exact component={Shop}/>
+        <Route  path="/shop/" exact component={Shop}/>
       </Switch>
       <Footer/>
     </ThemeProvider>

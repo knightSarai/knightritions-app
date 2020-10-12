@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 import './footer.styles.scss'
 
-export default function index() {
+export default function index({history}) {
     return (
         <footer id="main-footer" className="p-2">
             <div className="container footer-container">
@@ -31,7 +31,7 @@ export default function index() {
                 <div>
                     <h2>Take a look</h2>
                     <p>choose your fit from our store</p>
-                    <Link to="#" className="btn btn-secondary">shop now</Link>
+                    <Link to="/shop"  className="btn btn-secondary" >shop now</Link>
                 </div>
                 <div>
                     <p>
