@@ -9,11 +9,11 @@ export default function index() {
             <div className="container footer-container">
                 <div>
                     <img src="img/logo/knightritionsforblack.png" alt="Knightritions"/>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod nemo repellendus laborum et impedit doloremque adipisci nobis deserunt praesentium consectetur!</p>
+                    <p>Whether you’re an elite athlete, weekend warrior, or just trying to stay healthy — we believe in growing stronger together. From essential nutrition to cutting-edge formulas, we’ve got your fit.</p>
                 </div>
                 <div>
-                    <h3>Email NewsLetter</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <h3>Don't miss new offers!</h3>
+                    <p>NO SPAM :)</p>
                     <form name="contact" method="POST" data-netlify="true">
                         <input type="email" name="email" placeholder="Enter Email..."/>
                         <input type="submit" value="Subscribe" className="btn btn-primary"/>
@@ -29,9 +29,9 @@ export default function index() {
                     </ul>
                 </div>
                 <div>
-                    <h2>Join Our Club</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, illum!</p>
-                    <Link to="#" className="btn btn-secondary">Join Now</Link>
+                    <h2>Take a look</h2>
+                    <p>choose your fit from our store</p>
+                    <Link to="#" className="btn btn-secondary">shop now</Link>
                 </div>
                 <div>
                     <p>

@@ -1,4 +1,5 @@
 $dark-color: #10182A ; 
+$primary-color: #0288d1;
 
 #main-footer {
     background: $dark-color;
@@ -6,7 +7,7 @@ $dark-color: #10182A ;
 }
 
 #main-footer img {
-    width: 150px;
+    width: 200px;
     height: 70px;
 }
 
@@ -35,4 +36,19 @@ $dark-color: #10182A ;
 
 #main-footer .footer-container input[type='submit'] {
     width: 90%
+}
+
+.list {
+    li {
+        padding: 0.5rem 0;
+        border-bottom: #555 dotted 1px;
+        a {
+            &:hover{
+                color: $primary-color !important;
+            }
+        }
+        
+    }
+    
+    
 }
