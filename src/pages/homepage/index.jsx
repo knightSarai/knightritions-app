@@ -7,8 +7,8 @@ import About from '../_partails/about';
 export default function hompage() {
     return (
         <>
-            <Slider/>
             <div className="homepage container">
+            <Slider/>
                 <Directory/>
             </div>
             <About/>

@@ -14,5 +14,5 @@ export const Dot = styled.span`
         margin-right: 5px;
         cursor: pointer;
         border-radius: 50%;
-        background: ${({active}) => active ? 'black' : 'white'};
+        background: ${({active, theme}) => active ? theme.secondary.main : 'white'};
 `;
