@@ -34,10 +34,10 @@ export default function Index() {
                         <Link to="/shop">SHOP</Link>
                     </AppBarItem>
                     <AppBarItem>
-                        <Link to="/blog">BLOG</Link>
+                        <Link to="/sign">Sign in</Link>
                     </AppBarItem>
                     <AppBarItem>
-                        <Link to="/contact">Sign in</Link>
+                        <Link to="/blog">BLOG</Link>
                     </AppBarItem>
                 </AppBarItems>  
                 <Search sideBarOpen={sideBarOpen}/>
