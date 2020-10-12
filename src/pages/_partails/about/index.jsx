@@ -6,6 +6,7 @@ import ParallexAbout from './parallexAbout';
 export default function Index() {
     return (
         <About>
+            <ParallexAbout/>
             <SideScroll/>
             {/* <div className="article">
                 <div className="article-img">
@@ -16,7 +17,7 @@ export default function Index() {
                     <p>Our team of scientists, led by Drs, have over <span>50 years </span>of experience developing revolutionary products based on Real Science. The KnighTritions Science Team works with researchers and scientists from around the world to ensure our formulations deliver maximum results without compromising <span>your safety.</span></p>
                 </div>
             </div> */}
-            <ParallexAbout/>
+            
         </About>
     )
 }
