@@ -7,6 +7,7 @@ import {theme} from './styles/theme';
 import AppBar from './components/App-bar';
 import Homepage from './pages/homepage';
 import Shop from './pages/shop';
+import Sign from './pages/sign';
 import Footer from './pages/_partails/footer';
 
 import './App.css';
@@ -19,7 +20,8 @@ function App() {
       <ScrollToTop/>
       <Switch>
         <Route  path="/" exact component={Homepage}/>
-        <Route  path="/shop/" exact component={Shop}/>
+        <Route  path="/shop" exact component={Shop}/>
+        <Route  path="/sign" exact component={Sign}/>
       </Switch>
       <Footer/>
     </ThemeProvider>
