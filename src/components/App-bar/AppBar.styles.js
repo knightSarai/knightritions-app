@@ -32,6 +32,12 @@ export const Logo = styled.li`
     @media (max-width: ${({ theme }) => theme.size.tablet}) {
         margin: auto;
     };
+
+    a { 
+        img:focus{
+            outline: none
+        }
+    }
 `;
 export const AppBarItems = styled.div`
     display: flex;
