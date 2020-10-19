@@ -23,4 +23,11 @@ export const theme = new (function() {
         tablet:"850px",
         mobile: '625px'
     }
+    this.shrinkLabel = () => {
+        return `
+            top: -14px;
+            font-size: 12px;
+            color: ${this.primary.main};
+        `
+    }
 })();
