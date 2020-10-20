@@ -8,8 +8,9 @@ import Search from './SearchInput/';
 import SideBar from './SideBar/';
 import Backdrop from './backdrop/backdrop'
 import {Appbar, AppbarList, AppBarItems, AppBarItem, Logo} from './AppBar.styles';
+import { auth } from '../../firebase/firebase.util';
 
-export default function Index() {
+export default function AppBar({currentUser}) {
     const [sideBarOpen, toggleSideBar] = useToggleState();
     const node  = useRef();
     useOnClickOutside(sideBarOpen, node, () => toggleSideBar(false));
@@ -33,9 +34,17 @@ export default function Index() {
                     <AppBarItem>
                         <Link to="/shop">SHOP</Link>
                     </AppBarItem>
-                    <AppBarItem>
-                        <Link to="/sign">Sign in</Link>
-                    </AppBarItem>
+                    {
+                        currentUser? 
+                        <AppBarItem>
+                            <Link onClick={()=> auth.signOut()}>Sign Out</Link>
+                        </AppBarItem>
+                        : 
+                        <AppBarItem>
+                            <Link to="/sign">Sign in</Link>
+                        </AppBarItem>
+                    }
+                    
                     <AppBarItem>
                         <Link to="/blog">BLOG</Link>
                     </AppBarItem>
