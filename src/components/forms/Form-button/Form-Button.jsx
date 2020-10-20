@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from './button.styles';
 
-export default function FormInput({children, ...otherProps}) {
+export default function FormInput({children, isGoogleSignIn, ...otherProps}) {
     return (
-        <Button {...otherProps}>
+        <Button {...otherProps} isGoogleSignIn={isGoogleSignIn}>
             {children}
         </Button>
     )

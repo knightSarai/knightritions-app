@@ -8,7 +8,7 @@ export default styled.button`
     line-height: 50px;
     padding: 0 35px 0 35px;
     font-size: 20px;
-    background: ${({theme}) => theme.primary.main};
+    background: ${({theme, isGoogleSignIn}) => isGoogleSignIn? theme.secondary.main : theme.primary.main};
     color: #fff;
     text-transform : uppercase;
     font-weight: 300;
@@ -16,8 +16,9 @@ export default styled.button`
     cursor: pointer;
 
     &:hover {
-        background: #fff;
-        color:${({theme}) => theme.primary.main};
-        border: 1px solid #000;
+        background: ${({ isGoogleSignIn}) => !isGoogleSignIn && " #fff"};
+        color:${({theme, isGoogleSignIn}) => !isGoogleSignIn && theme.primary.main};
+        border: ${({isGoogleSignIn}) => isGoogleSignIn? "none" : "0.2px solid #000"};
+        opacity:${({isGoogleSignIn}) => isGoogleSignIn? "0.9" : "1"};
     }
 `;

@@ -28,8 +28,10 @@ export default class SignInForm extends React.Component{
                 <form>
                     <Input label="Email" type="email" name="email" value={this.state.email} required handleChange={this.handleChange}/>
                     <Input label="Password" type="password" name="password" value={this.state.password} required onChange={this.handleChange}/>
-                    <Button type="submit">Sign in</Button>
-                    <Button onClick={signInWithGoogle}>Sign in with Google</Button>
+                    <div className="buttons">
+                        <Button type="submit">Sign in</Button>
+                        <Button onClick={signInWithGoogle} isGoogleSignIn>Sign in with Google</Button>
+                    </div>
                 </form>
             </SignIn>
         )
