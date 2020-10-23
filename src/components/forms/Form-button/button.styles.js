@@ -18,7 +18,7 @@ export default styled.button`
     &:hover {
         background: ${({ isGoogleSignIn}) => !isGoogleSignIn && " #fff"};
         color:${({theme, isGoogleSignIn}) => !isGoogleSignIn && theme.primary.main};
-        border: ${({isGoogleSignIn}) => isGoogleSignIn? "none" : "0.2px solid #000"};
+        border: ${({theme, isGoogleSignIn}) => isGoogleSignIn? "none" : `0.2px solid ${theme.primary.main}`};
         opacity:${({isGoogleSignIn}) => isGoogleSignIn? "0.9" : "1"};
     }
 `;
