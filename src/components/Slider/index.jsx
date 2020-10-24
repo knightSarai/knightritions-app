@@ -67,10 +67,7 @@ export default class Index extends Component{
         this.setTransformAndTransition('transform 0.4s ease-in-out');
         this.startAutoPlay();
     }
-    componentDidMount() {
-        this.imgsRefs[this.counter].addEventListener('load', this.onLoad);
-        this.startAutoPlay()
-    }
+    
     transitionEnd = (num) => {
         this.counter = this.imgsRefs.length - num;
         this.setState({...this.state, transition: "none"}, () => {
@@ -88,6 +85,13 @@ export default class Index extends Component{
         this.autoPlay = setInterval(this.nextSlide, this.state.autoPlayTime * 1000)
     }
     stopAutoPlay = () => {
+        clearInterval(this.autoPlay)
+    }
+    componentDidMount() {
+        this.imgsRefs[this.counter].addEventListener('load', this.onLoad);
+        this.startAutoPlay()
+    }
+    componentWillUnmount() {
         clearInterval(this.autoPlay)
     }
     render() {
