@@ -1,7 +1,7 @@
 import React from 'react';
 import {ThemeProvider} from 'styled-components';
 import {Switch, Route} from 'react-router-dom';
-import {auth} from './firebase/firebase.util';
+import {auth, createUserProfileDocument} from './firebase/firebase.util';
 import ScrollToTop from './util/ScrollToTop';
 import {GlobalStyles} from './styles/global';
 import {theme} from './styles/theme';
@@ -21,9 +21,22 @@ class App extends React.Component{
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({currentUser: user});
-      console.log(user);
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      if(userAuth) {
+        const userRef = await createUserProfileDocument(userAuth).catch(err => console.log(err));
+        userRef.onSnapshot(snapshot => {
+          this.setState({
+            currentUser: {
+              id: snapshot.id,
+              ...snapshot.data()
+            }
+          })
+        })
+      }else {
+        this.setState({currentUser: userAuth})
+      }
+      
+      // console.log(user);
     })
   }
 

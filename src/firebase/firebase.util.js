@@ -13,6 +13,24 @@ const config = {
     measurementId: "G-5TG3D170FX"
 };
 
+export const createUserProfileDocument = async (userAuth, args) => {
+    if (!userAuth) return;
+    const userRef = await firestore.doc(`users/${userAuth.uid}`);
+    const snapShot = await userRef.get()
+
+    if (!snapShot.exists) {
+        const {displayName, email} = userAuth;
+        const createdAt = new Date();
+        await userRef.set({
+            displayName,
+            email,
+            createdAt,
+            ...args
+        })
+    }
+    return userRef;
+}
+
 firebase.initializeApp(config)
 
 export const auth = firebase.auth();
