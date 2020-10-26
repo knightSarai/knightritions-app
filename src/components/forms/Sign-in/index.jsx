@@ -22,10 +22,10 @@ export default class SignInForm extends React.Component{
     }
     render () {
         return (
-            <SignIn onSubmit={this.handleSubmit}>
+            <SignIn >
                 <h1>I Already Have An Account</h1>
                 <span>Sign in with your email & password</span>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <Input label="Email" type="email" name="email" value={this.state.email} required handleChange={this.handleChange}/>
                     <Input label="Password" type="password" name="password" value={this.state.password} required onChange={this.handleChange}/>
                     <div className="buttons">

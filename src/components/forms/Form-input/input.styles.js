@@ -15,7 +15,7 @@ export default styled.div`
         width:  100%;
         border: none;
         border-radius: 0;
-        border-bottom: 1px solid ${({theme}) => theme.secondary.main};
+        border-bottom: 1px solid ${({theme}) => theme.primary.main};
         &:focus {
             outline: none;
         }
