@@ -1,10 +1,11 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 import Input from '../Form-input';
 import Button from '../Form-button';
 import {auth, createUserProfileDocument } from '../../../firebase/firebase.util';
 import SignUp from './sign-up.styles';
 
-export default class SignUpForm extends React.Component {
+class SignUpForm extends React.Component {
     state = {
         displayName: '',
         email: '',
@@ -28,7 +29,8 @@ export default class SignUpForm extends React.Component {
                 email: '',
                 password: '',
                 confirmPassword: ''
-            })
+            });
+            this.props.history.push('/')
         } catch (err) {
             console.error(err);
         }
@@ -91,3 +93,5 @@ export default class SignUpForm extends React.Component {
     }
     
 }
+
+export default withRouter(SignUpForm);

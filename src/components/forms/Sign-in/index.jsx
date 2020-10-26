@@ -1,9 +1,10 @@
 import React from 'react';
-import {signInWithGoogle} from '../../../firebase/firebase.util';
+import {withRouter} from 'react-router-dom'
+import {auth, signInWithGoogle} from '../../../firebase/firebase.util';
 import Input from '../Form-input'
 import SignIn from './sign-in.styles';
 import Button from '../Form-button'
-export default class SignInForm extends React.Component{
+class SignInForm extends React.Component{
     state = {
         email: '',
         password: ''
@@ -16,9 +17,17 @@ export default class SignInForm extends React.Component{
         })
     }
 
-    handleSubmit = evt => {
+    handleSubmit = async evt => {
         evt.preventDefault();
-        this.setState({email: "", password: ""})
+        const {email, password} = this.state;
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+            this.setState({email: "", password: ""})
+            this.props.history.push('/')
+        } catch (err) {
+            console.error(err);
+        }
+        
     }
     render () {
         return (
@@ -38,3 +47,5 @@ export default class SignInForm extends React.Component{
     }
 
 }
+
+export default withRouter(SignInForm)
