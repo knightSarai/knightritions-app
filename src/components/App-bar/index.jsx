@@ -37,7 +37,7 @@ export default function AppBar({currentUser}) {
                     {
                         currentUser? 
                         <AppBarItem>
-                            <Link onClick={()=> auth.signOut()}>Sign Out</Link>
+                            <Link to="/" onClick={()=> auth.signOut()}>Sign Out</Link>
                         </AppBarItem>
                         : 
                         <AppBarItem>
