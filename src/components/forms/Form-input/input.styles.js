@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export default styled.div`
     position: relative;
-    margin: 45px 0;
+    margin: 30px 0;
 
     input{
         background: none;

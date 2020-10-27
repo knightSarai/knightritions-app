@@ -1,5 +1,8 @@
 .sign-page {
     height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
+    .forms {
+        margin-top: 8rem;
+        display: flex;
+        justify-content: space-evenly;
+    }
 }

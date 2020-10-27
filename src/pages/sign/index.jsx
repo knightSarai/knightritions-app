@@ -6,9 +6,12 @@ import './sign.styles.scss';
 
 export default function index() {
     return (
-        <div className="sign-page container">
-            <SignIn/>
-            <SignUp/>
+        <div className="container sign-page">
+            <div className="forms">
+                <SignIn/>
+                <SignUp/>
+            </div>
+            
         </div>
     )
 }
