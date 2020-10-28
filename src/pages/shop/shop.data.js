@@ -1,4 +1,4 @@
-export default {
+const data = {
     collections: [
         {
             id: 1,
@@ -144,3 +144,5 @@ export default {
         }
     ]
 }
+
+export default data;

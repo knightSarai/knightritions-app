@@ -1,4 +1,5 @@
-export default  {
+
+const diredata =  {
     sections: [
         {
             title: 'Supplements',
@@ -26,3 +27,5 @@ export default  {
         },
     ]
 }
+
+export default diredata;

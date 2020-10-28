@@ -2,7 +2,7 @@ import React from 'react';
 import {v4 as uuid} from 'uuid';
 import Slide from './Slide'
 
-export default (slideImages, imgsRefs) => slideImages.map((img, idx) => {
+const rendered = (slideImages, imgsRefs) => slideImages.map((img, idx) => {
     const setRef = element => {
         imgsRefs.push(element);
     }
@@ -24,3 +24,4 @@ export default (slideImages, imgsRefs) => slideImages.map((img, idx) => {
             )
         }
 })
+export default rendered;

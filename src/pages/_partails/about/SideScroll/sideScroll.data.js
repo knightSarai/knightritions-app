@@ -1,4 +1,4 @@
-export default [
+const data = [
         {
             title: "Proven Performance",
             text: "At Knightritions, we pride ourselves on putting our scientifically proven products to the test with elite athletes at world class training facilities. Knightrions is the sports nutrition supplement brand of choice for Chip Smith Performance Systems. A world-class training facility where the best athletes go to get better!",
@@ -14,4 +14,6 @@ export default [
             text: "Knightritions, is one of the standard bearers when it comes to protein supplements, and the company’s products boast a sharp new look to go with their storied past.",
             img: undefined
         }, 
-]
+];
+
+export default data;

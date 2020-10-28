@@ -1,4 +1,4 @@
-export default [
+const data = [
     {
         title: "CHOOSE YOUR FIT",
         text: "Whether you’re an elite athlete, weekend warrior, or just trying to stay healthy — we believe in growing stronger together. From essential nutrition to cutting-edge formulas, we’ve got your fit.",
@@ -20,3 +20,4 @@ export default [
         img: "img/homepage/7.jpg"
     },
 ]
+export default data;
