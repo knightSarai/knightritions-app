@@ -1,5 +1,7 @@
 import React, {useRef} from 'react';
 import  {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+
 import { useOnClickOutside } from '../../hooks/useOnClickOutSide';
 import useToggleState from '../../hooks/useToggleState';
 
@@ -10,7 +12,7 @@ import Backdrop from './backdrop/backdrop'
 import {Appbar, AppbarList, AppBarItems, AppBarItem, Logo} from './AppBar.styles';
 import { auth } from '../../firebase/firebase.util';
 
-export default function AppBar({currentUser}) {
+function AppBar({currentUser}) {
     const [sideBarOpen, toggleSideBar] = useToggleState();
     const node  = useRef();
     useOnClickOutside(sideBarOpen, node, () => toggleSideBar(false));
@@ -54,4 +56,11 @@ export default function AppBar({currentUser}) {
                 {backdrop}
         </Appbar> 
     )
-}
+};
+
+const mapStateToProps = state => ({
+    currentUser: state.user.currentUser
+})
+
+
+export default connect(mapStateToProps)(AppBar)
