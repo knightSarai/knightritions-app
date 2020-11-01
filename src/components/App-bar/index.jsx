@@ -8,6 +8,8 @@ import useToggleState from '../../hooks/useToggleState';
 import Burger from './Burger';
 import Search from './SearchInput/';
 import SideBar from './SideBar/';
+import Cart from './cart';
+import CartDropdown from './cart/dropdown';
 import Backdrop from './backdrop/backdrop'
 import {Appbar, AppbarList, AppBarItems, AppBarItem, Logo} from './AppBar.styles';
 import { auth } from '../../firebase/firebase.util';
@@ -47,12 +49,14 @@ function AppBar({currentUser}) {
                         </AppBarItem>
                     }
                     
-                    <AppBarItem>
-                        <Link to="/blog">BLOG</Link>
-                    </AppBarItem>
+                <AppBarItem>
+                    <Link to="/blog">BLOG</Link>
+                </AppBarItem>
                 </AppBarItems>  
                 <Search sideBarOpen={sideBarOpen}/>
+                <Cart/>
                 </AppbarList>
+                <CartDropdown/>
                 {backdrop}
         </Appbar> 
     )
