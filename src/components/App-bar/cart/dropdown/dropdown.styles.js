@@ -9,8 +9,8 @@ export default styled.div`
     display: flex;
     flex-direction: column;
     padding: 20px;
-    border: 1px solid black;
-    top: 80px;
+    border: 1px solid ${({theme}) => theme.light.main};
+    top: 75px;
     right: 35px;
     z-index: 500;
 

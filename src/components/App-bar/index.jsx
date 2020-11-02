@@ -14,7 +14,7 @@ import Backdrop from './backdrop/backdrop'
 import {Appbar, AppbarList, AppBarItems, AppBarItem, Logo} from './AppBar.styles';
 import { auth } from '../../firebase/firebase.util';
 
-function AppBar({currentUser}) {
+function AppBar({currentUser, hidden}) {
     const [sideBarOpen, toggleSideBar] = useToggleState();
     const node  = useRef();
     useOnClickOutside(sideBarOpen, node, () => toggleSideBar(false));
@@ -56,14 +56,16 @@ function AppBar({currentUser}) {
                 <Search sideBarOpen={sideBarOpen}/>
                 <Cart/>
                 </AppbarList>
-                <CartDropdown/>
+                {!hidden && <CartDropdown/>}
+                
                 {backdrop}
         </Appbar> 
     )
 };
 
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
+const mapStateToProps = ({user: {currentUser}, cart: {hidden} }) => ({
+    currentUser,
+    hidden
 })
 
 
