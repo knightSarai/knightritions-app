@@ -1,25 +1,29 @@
 import React from 'react';
-import {ThemeProvider} from 'styled-components';
 import {Switch, Route, Redirect} from 'react-router-dom';
+/* FIREBASE */
 import {auth, createUserProfileDocument} from './firebase/firebase.util';
+/* REDUX */
 import {connect} from 'react-redux';
 import {setCurrentUser} from './redux/user/user.action';
 import {selectCurrentUser} from './redux/user/user.selector';
-
+/* UTIL*/
 import ScrollToTop from './util/ScrollToTop';
-import {GlobalStyles} from './styles/global';
-import {theme} from './styles/theme';
+/*COMPONENTS */
 import AppBar from './components/App-bar';
+import Footer from './pages/_partails/footer';
+/* PAGES */
 import Homepage from './pages/homepage';
 import Shop from './pages/shop';
 import Sign from './pages/sign';
-import Footer from './pages/_partails/footer';
-
+import CheckoutCart from './pages/checkoutCart';
+/* STYLES */
+import {ThemeProvider} from 'styled-components';
+import {GlobalStyles} from './styles/global';
+import {theme} from './styles/theme';
 import './App.css';
 
 class App extends React.Component{
   
-
   unsubscribeFromAuth = null;
 
   componentDidMount() {
@@ -45,7 +49,6 @@ class App extends React.Component{
   }
   render () {
     const {currentUser} = this.props;
-
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyles/>
@@ -54,6 +57,7 @@ class App extends React.Component{
         <Switch>
           <Route  path="/" exact component={Homepage}/>
           <Route  path="/shop" exact component={Shop}/>
+          <Route path="/checkout" exact component={CheckoutCart}/>
           <Route  path="/sign" exact render={() => currentUser? <Redirect to="/"/> : <Sign/>}/>
         </Switch>
         <Footer/>
