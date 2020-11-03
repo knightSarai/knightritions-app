@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export default styled.div`
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     margin-left: 2rem;
     position: relative;
     display: flex;
@@ -20,6 +20,6 @@ export default styled.div`
         position: absolute;
         font-size:  15px;
         font-weight: 600;
-        bottom: 5px;
+        bottom: 6px;
     }
 `;
