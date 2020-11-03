@@ -1,8 +1,12 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {connect} from 'react-redux';
+
+import {addItemToCart} from '../../redux/cart/cart.action'
+
 import {Item} from './item.styles';
 
-export default function index({id, img, name, price}) {
+function CollectionItem({item, addItemToCart}) {
+    const {id, img, name, price} = item;
     return (
         <Item key={id}>
             <div className="img-box">
@@ -11,8 +15,10 @@ export default function index({id, img, name, price}) {
             <div className="content-box">
                 <h3>{name}</h3>
                 <h2 className="price">{price}<small>JOD</small></h2>
-                <Link to="" className="cart">Add To Cart</Link>
+                <button className="cart" onClick={()=> addItemToCart(item)}>Add To Cart</button>
             </div>
         </Item>
     )
-}
+};
+
+export default connect(null,{addItemToCart})(CollectionItem);

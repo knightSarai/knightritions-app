@@ -3,7 +3,7 @@ import {v4 as uuid} from 'uuid';
 import ShopItem from '../shop-collection-item'
 import {Collection} from './collection.styles';
 
-export default function index({title, items}) {
+export default function ShopCollection({title, items}) {
     let itemNum = 4;
     return (
         <Collection>
@@ -11,7 +11,7 @@ export default function index({title, items}) {
             <div className="preview">
                 {items
                     .slice(0, itemNum)
-                    .map(item => <ShopItem key={uuid()} {...item}/>)}
+                    .map(item => <ShopItem key={uuid()} item={item}/>)}
             </div>
         </Collection>
     )
