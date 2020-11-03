@@ -26,7 +26,16 @@ export default styled.div`
     }
 
     .quantity {
-      padding-left: 20px;
+        display: flex;
+
+        .arrow {
+            cursor: pointer;
+        }
+
+        .value {
+            margin: 0 10px;
+        }
+        padding-left: 20px;
     }
 
     .remove-button {
