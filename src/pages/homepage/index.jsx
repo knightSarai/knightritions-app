@@ -4,7 +4,7 @@ import Directory from '../../components/directory';
 import './homepage.styles.scss';
 import About from '../_partails/about';
 
-export default function hompage() {
+export default function Hompage() {
     return (
         <>
             <div className="homepage container">
