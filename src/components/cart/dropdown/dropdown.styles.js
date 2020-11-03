@@ -14,6 +14,10 @@ export default styled.div`
     right: 35px;
     z-index: 500;
 
+    .empty-message {
+        font-size: 18px;
+        margin: 50px auto;
+    }
     .cart-items {
         height:  ${height - 100}px;
         display: flex;
