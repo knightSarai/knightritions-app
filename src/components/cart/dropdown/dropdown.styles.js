@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const height = 340;
+const height = 355;
 export default styled.div`
     background: #fff;
     position: fixed;
