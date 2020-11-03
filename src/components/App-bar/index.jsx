@@ -1,7 +1,9 @@
 import React, {useRef} from 'react';
 import  {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-
+import { createStructuredSelector } from 'reselect';
+import {cartHiddenSelector} from '../../redux/cart/cart.selector';
+import {selectCurrentUser} from '../../redux/user/user.selector'
 import { useOnClickOutside } from '../../hooks/useOnClickOutSide';
 import useToggleState from '../../hooks/useToggleState';
 
@@ -57,16 +59,14 @@ function AppBar({currentUser, hidden}) {
                 <Cart/>
                 </AppbarList>
                 {!hidden && <CartDropdown/>}
-                
                 {backdrop}
         </Appbar> 
     )
 };
 
-const mapStateToProps = ({user: {currentUser}, cart: {hidden} }) => ({
-    currentUser,
-    hidden
-})
-
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser,
+    hidden: cartHiddenSelector
+});
 
 export default connect(mapStateToProps)(AppBar)

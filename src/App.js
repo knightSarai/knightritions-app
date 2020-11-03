@@ -4,6 +4,8 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import {auth, createUserProfileDocument} from './firebase/firebase.util';
 import {connect} from 'react-redux';
 import {setCurrentUser} from './redux/user/user.action';
+import {selectCurrentUser} from './redux/user/user.selector';
+
 import ScrollToTop from './util/ScrollToTop';
 import {GlobalStyles} from './styles/global';
 import {theme} from './styles/theme';
@@ -61,8 +63,8 @@ class App extends React.Component{
  
 }
 
-const mapStateToProps = ({user}) => ({
-  currentUser: user.currentUser
+const mapStateToProps = state => ({
+  currentUser: selectCurrentUser(state)
 })
 
 export default connect(mapStateToProps, {setCurrentUser})(App);
