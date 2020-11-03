@@ -1,7 +1,7 @@
 import React from 'react';
 
 import CartDropDown from './dropdown.styles';
-import Button from '../../../forms/Form-button';
+import Button from '../../forms/Form-button';
 
 export default function Dropdown() {
 

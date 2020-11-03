@@ -1,4 +1,4 @@
-import cart from "../../components/App-bar/cart"
+import cart from "../../components/cart"
 
 export const addItemToCart = (cartItems, cartItemsToAdd) => {
     const existItem = cartItems.find(cartItem => cartItem.id === cartItemsToAdd.id);

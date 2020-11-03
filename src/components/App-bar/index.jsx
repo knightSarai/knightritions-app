@@ -8,8 +8,8 @@ import useToggleState from '../../hooks/useToggleState';
 import Burger from './Burger';
 import Search from './SearchInput/';
 import SideBar from './SideBar/';
-import Cart from './cart';
-import CartDropdown from './cart/dropdown';
+import Cart from '../cart';
+import CartDropdown from '../cart/dropdown';
 import Backdrop from './backdrop/backdrop'
 import {Appbar, AppbarList, AppBarItems, AppBarItem, Logo} from './AppBar.styles';
 import { auth } from '../../firebase/firebase.util';
