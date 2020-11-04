@@ -1,5 +1,4 @@
-
-const diredata =  {
+const INITIAL_STATE = {
     sections: [
         {
             title: 'Supplements',
@@ -28,4 +27,11 @@ const diredata =  {
     ]
 }
 
-export default diredata;
+const directoryReducer = (state = INITIAL_STATE, action) => {
+    switch(action.type) {
+        default:
+            return state;
+    }
+};
+
+export default directoryReducer;

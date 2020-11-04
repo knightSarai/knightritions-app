@@ -1,11 +1,14 @@
 import React from 'react';
+/**Redux */
+import {connect} from 'react-redux';
+import {createStructuredSelector} from 'reselect';
+import {selecetDirectorySections} from '../../../redux/directory/directory.selector'
+/**Util */
 import {v4 as uuid} from 'uuid';
 import {sideBareData, otherlinks} from './sideBarData';
 import {NavItems, NavItem, StyledLink, Divider, SideBarStyled} from './SideBar.styled';
-import directoryData from '../../directory/dirctoryData';
 
-export default function SideBar({sideBarOpen}) {
-    const {sections} = directoryData;
+function SideBar({sideBarOpen, sections}) {
     const renderedSections = sections.map(({id, linkUrl, title}) =>(
         <NavItem key={id}>
             <StyledLink to={linkUrl} >
@@ -36,7 +39,7 @@ export default function SideBar({sideBarOpen}) {
     )
     );
 
-    const renderdComponent = (
+    return(
         <SideBarStyled sideBarOpen={sideBarOpen}>
             <NavItems>
                 <p>Quick access</p>
@@ -47,10 +50,12 @@ export default function SideBar({sideBarOpen}) {
                 <Divider/>
                 {renderedOtherLinks}
             </NavItems>
-            
         </SideBarStyled>  
     );
-
-
-    return renderdComponent;
 }
+
+const mapStateToProps = createStructuredSelector({
+    sections: selecetDirectorySections
+});
+
+export default connect(mapStateToProps)(SideBar);
