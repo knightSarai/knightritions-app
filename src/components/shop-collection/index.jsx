@@ -1,13 +1,14 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import {v4 as uuid} from 'uuid';
 import ShopItem from '../shop-collection-item'
 import {Collection} from './collection.styles';
 
-export default function ShopCollection({title, items}) {
+export default function ShopCollection({title, items, routeName}) {
     let itemNum = 4;
     return (
         <Collection>
-            <h1 className="title">{title.toUpperCase()}</h1>
+            <Link to={`/shop/${routeName}`} className="title">{title.toUpperCase()}</Link>
             <div className="preview">
                 {items
                     .slice(0, itemNum)
