@@ -56,9 +56,10 @@ class App extends React.Component{
         <ScrollToTop/>
         <Switch>
           <Route  path="/" exact component={Homepage}/>
-          <Route  path="/shop" exact component={Shop}/>
+          <Route  path="/shop"  component={Shop}/>
           <Route path="/checkout" exact component={CheckoutCart}/>
           <Route  path="/sign" exact render={() => currentUser? <Redirect to="/"/> : <Sign/>}/>
+          <Route render={() => <h1>Not found!</h1>} />
         </Switch>
         <Footer/>
       </ThemeProvider>

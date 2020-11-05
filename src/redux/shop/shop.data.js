@@ -1,10 +1,10 @@
 const data = {
-    collections: [
-        {
-            id: 1,
-            title: "Supplements",
-            routeName: "supplements",
-            items: [
+    collections: {
+        supplements: {
+                id: 1,
+                title: "Supplements",
+                routeName: "supplements",
+                items: [
                 {
                     id: 1,
                     name: "Dymatize iso",
@@ -37,11 +37,11 @@ const data = {
                 }
             ]
         },
-        {
-            id: 2,
-            title: "Products",
-            routeName: "products",
-            items: [
+        products:{
+                id: 2,
+                title: "Products",
+                routeName: "products",
+                items: [
                 {
                     id: 6,
                     name: "Heavy Bags",
@@ -74,11 +74,11 @@ const data = {
                 },
             ]
         },
-        {
-            id: 3,
-            title: "Fitness Clothing",
-            routeName: "clothing",
-            items: [
+        clothing: {
+                id: 3,
+                title: "Fitness Clothing",
+                routeName: "clothing",
+                items: [
                 {
                     id: 11,
                     name: "Pants",
@@ -105,11 +105,11 @@ const data = {
                 },
             ]
         },
-        {
-            id: 4,
-            title: "Home Gym",
-            routeName: "homegym",
-            items: [
+        homegym:{
+                id: 4,
+                title: "Home Gym",
+                routeName: "homegym",
+                items: [
                 {
                     id: 15,
                     name: "Benchs",
@@ -142,7 +142,7 @@ const data = {
                 }
             ]
         }
-    ]
+    }
 }
 
 export default data;

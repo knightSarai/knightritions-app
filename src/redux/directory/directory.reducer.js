@@ -3,25 +3,25 @@ const INITIAL_STATE = {
         {
             title: 'Supplements',
             imgUrl: '/img/directory/supplements.jpg',
-            linkUrl: '/supplements',
+            linkUrl: 'shop/supplements',
             id: 1
         },
         {
             title: 'Fitness clothing',
             imgUrl: '/img/directory/clothes.jpg',
-            linkUrl: '/clothing',
+            linkUrl: 'shop/clothing',
             id: 2
         },
         {
             title: 'Products',
             imgUrl: '/img/directory/products.jpg',
-            linkUrl: '/products',
+            linkUrl: 'shop/products',
             id: 3
         },
         {
             title: 'Home Gym',
             imgUrl: '/img/directory/homegym.jpg',
-            linkUrl: '/homegyme',
+            linkUrl: 'shop/homegyme',
             id: 4
         },
     ]

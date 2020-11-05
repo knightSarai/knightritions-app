@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Item = styled.div`
     position: relative;
-    width: 350px;
+    width: 22vw;
     height: 350px;
     margin: 0 10px;
     display: flex;
