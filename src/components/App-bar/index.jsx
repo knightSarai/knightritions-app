@@ -8,7 +8,6 @@ import { useOnClickOutside } from '../../hooks/useOnClickOutSide';
 import useToggleState from '../../hooks/useToggleState';
 
 import Burger from './Burger';
-import Search from './SearchInput/';
 import SideBar from './SideBar/';
 import Cart from '../cart';
 import CartDropdown from '../cart/dropdown';
@@ -55,7 +54,6 @@ function AppBar({currentUser, hidden}) {
                     <Link to="/blog">BLOG</Link>
                 </AppBarItem>
                 </AppBarItems>  
-                <Search sideBarOpen={sideBarOpen}/>
                 <Cart/>
                 </AppbarList>
                 {!hidden && <CartDropdown/>}
