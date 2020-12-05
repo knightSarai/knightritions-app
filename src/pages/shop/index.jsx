@@ -17,7 +17,18 @@ function ShopPage({match, updateCollections}) {
     useEffect(() => {
         let unsubscribeFromSnapShot = null;
         const collectionRef = firestore.collection('collections');
-        unsubscribeFromSnapShot = collectionRef.onSnapshot(async snapshot => {
+        /**
+         * We can use Promise pased instead of Observable patterns:
+         *  collectionRef
+         *      .get()
+                 .then(snapshot => {
+                    const collectionMap = convertCollectionsSnapshotToMap(snapshot);
+                    updateCollections(collectionMap);
+                    setLoading(false);
+                )
+                //* but here the only time that we get data is when we render the component
+         */
+        unsubscribeFromSnapShot = collectionRef.onSnapshot( snapshot => {
             const collectionMap = convertCollectionsSnapshotToMap(snapshot);
             updateCollections(collectionMap);
             setLoading(false);
