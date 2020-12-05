@@ -1,4 +1,3 @@
-import collection from '../../pages/collection';
 import {UPDATE_COLLECTIONS} from './shop.types';
 
 export const updateCollections = collectionMap => ({
