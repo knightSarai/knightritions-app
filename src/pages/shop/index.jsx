@@ -8,7 +8,6 @@ import WithSpinner from '../../components/WithSpinner';
 import CollectionOverview from '../../components/collection-overview';
 import CollectionPage from '../collection';
 import './shop.styles.scss';
-import CollectionsOverview from '../../components/collection-overview';
 
 const WithSpinnerCollectionOverView= WithSpinner(CollectionOverview);
 const WithSpinnerCollectionPage = WithSpinner(CollectionPage); 
