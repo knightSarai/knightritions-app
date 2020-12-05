@@ -23,6 +23,9 @@ function ShopPage({match, updateCollections}) {
             setLoading(false);
         });
         
+        return () => {
+            unsubscribeFromSnapShot();
+        }
     },[updateCollections]);
 
     return (
